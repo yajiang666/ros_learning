@@ -1,0 +1,65 @@
+<robot name="mycar">
+    <link name="foot_base_link">
+        <visual>
+            <geometry>
+                <sphere radius="0.00001"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="foot_base_link2base_link" type="fixed">
+        <parent link="foot_base_link"/>
+        <child link="base_link"/>
+        <origin xyz="0 0 0.055"/>
+    </joint>
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <!-- <box size="0.5 0.2 0.1" /> -->
+                <cylinder radius="0.1" length="0.08"/> 
+            </geometry>
+            <!-- 因为这个地方只需要把他抬起来一点就可以 -->
+            <origin xyz="0 0 0"/>
+            <material name="black">
+                <color rgba="0.7 0.5 0 1"/>
+            </material>
+        </visual>
+    </link>
+        <link name="wheel_left">
+        <visual>
+            <geometry>
+                <!-- <box size="0.5 0.2 0.1" /> -->
+                <cylinder radius="0.0325" length="0.015"/> 
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.5705 0 0"/>
+            <material name="black">
+                <color rgba="0 0 0 1"/>
+            </material>
+        </visual>
+    </link>
+    <joint name="left_wheel2baes_link" type="continuous">
+        <parent link="base_link"/>
+        <child link="wheel_left"/>
+        <origin xyz="0 0.1 -0.0225"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+
+    <link name="wheel_right">
+        <visual>
+            <geometry>
+                <!-- <box size="0.5 0.2 0.1" /> -->
+                <cylinder radius="0.0325" length="0.015"/> 
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.5705 0 0"/>
+            <material name="black">
+                <color rgba="0 0 0 1"/>
+            </material>
+        </visual>
+    </link>
+    <joint name="right_wheel2baes_link" type="continuous">
+        <parent link="base_link"/>
+        <child link="wheel_right"/>
+        <origin xyz="0 -0.1 -0.0225"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+</robot>

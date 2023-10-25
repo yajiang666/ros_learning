@@ -1,0 +1,27 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/hejinhong/ros_learning/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/hejinhong/ros_learning/src/dynamic_transform/include/**",
+        "/home/hejinhong/ros_learning/src/new_client/include/**",
+        "/home/hejinhong/ros_learning/src/new_static_pub/include/**",
+        "/home/hejinhong/ros_learning/src/pkg_param/include/**",
+        "/home/hejinhong/ros_learning/src/trasnform/include/**",
+        "/home/hejinhong/ros_learning/src/turtle_exs/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
